@@ -22,13 +22,13 @@ public class LZWDecompress {
             inputFileText = inputFileText.trim();
             inputFileText = inputFileText.substring(1, inputFileText.length() - 1);
             String[] str = inputFileText.split(", ");
-            System.out.println("Input file text:" + inputFileText);
+            //System.out.println("Input file text:" + inputFileText);
 
             List<Integer> intList = new ArrayList<>();
             for(String s : str) intList.add(Integer.valueOf(s));
 
             String decodedText = decode(intList);
-            System.out.println("Output file text:" + decodedText);
+            //System.out.println("Output file text:" + decodedText);
 
             List<String> lines = Arrays.asList(decodedText);
             Path file = Paths.get(outputFile.getAbsolutePath());

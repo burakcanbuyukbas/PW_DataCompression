@@ -1,27 +1,8 @@
-/* 
- * Reference Huffman coding
- * Copyright (c) Project Nayuki
- * 
- * https://www.nayuki.io/page/reference-huffman-coding
- * https://github.com/nayuki/Reference-Huffman-coding
- */
-
 import java.io.*;
 
-
-/**
- * Compression application using static Huffman coding.
- * <p>Usage: java HuffmanCompress InputFile OutputFile</p>
- * <p>Then use the corresponding "HuffmanDecompress" application to recreate the original input file.</p>
- * <p>Note that the application uses an alphabet of 257 symbols - 256 symbols for the byte values
- * and 1 symbol for the EOF marker. The compressed file format starts with a list of 257
- * code lengths, treated as a canonical code, and then followed by the Huffman-coded data.</p>
- */
 public final class HuffmanCompress {
 	
-	// Command line main application function.
 	public static void main(String[] args) throws IOException {
-		// Handle command line arguments
 		if (args.length != 2) {
 			System.err.println("Usage: java HuffmanCompress InputFile OutputFile");
 			System.exit(1);

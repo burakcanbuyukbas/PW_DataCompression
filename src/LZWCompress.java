@@ -20,9 +20,9 @@ public class LZWCompress {
 
         try{
             String inputFileText = new String(Files.readAllBytes(Paths.get(inputFile.getAbsolutePath())));
-            System.out.println("Input file text:" + inputFileText);
+            //System.out.println("Input file text:" + inputFileText);
             String encodedText = encode(inputFileText).toString();
-            System.out.println("Output file text:" + encodedText);
+            //System.out.println("Output file text:" + encodedText);
 
             List<String> lines = Arrays.asList(encodedText);
             Path file = Paths.get(outputFile.getAbsolutePath());
